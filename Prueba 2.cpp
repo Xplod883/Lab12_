@@ -174,7 +174,10 @@ string consultarOpenAI(const string& pregunta) {
     RespuestaAPI respuesta = { nullptr, 0 };
 
     // IMPORTANTE: Reemplazar con API key válida!
-    const string api_key = "Bearer sk-proj-..."; 
+     const string api_key = "Bearer Aquí va el API-KEY que usted dió Ingeniero, copie y pegue su API-KEY aquí";
+ if (api_key == "Bearer error") {
+     return "ERROR: Por favor configura tu API key de OpenAI en el código (reemplaza en const string)";
+ }
     
     const string url = "https://api.openai.com/v1/chat/completions";
     string json = "{"
