@@ -1,0 +1,16 @@
+LAB #12: Chatbot con base de datos local y función con OpenAI
+Carlos Eduardo García Cortez | 5090-24-14824 | 02/05/2025
+
+El código utiliza la librería "libcurl" para realizar solicitudes HTTP a la API-KEY de OpenAI, para esto se implementó un manejo para recibir respuestas generativas en tiempo real, y en la función void consultarOpenAI() {, hay una construcción del JSON con el modelo y mensaje que el usuario quiera usar al momento de que le genere respuestas.
+
+Se usaron técnicas de preprocesamiento como normalización en mayúsculas y minúsculas, tokenización y búsqueda por coincidencias. Por ejemplo, en la función string buscarPorPalabrasClave(const map<string, string>& conocimiento, const string& pregunta) {, se usa un algoritmo de coincidencia de términos para respuestas locales, esto con la librería #include <algorithm>.
+
+En el código se usó una combinación de respuestas predefinidas con generativas, teniendo una jerarquía de búsqueda: Exacta, palabras clave y OpenAI.
+
+Además, OpenAI permite conversaciones contextuales pero no está implementado para mantener conversaciones continuas con contextos anteriores, pero se utiliza un modelo eficiente como gpt-3.5-turbo.
+
+Conclusión:
+
+Este laboratorio me enseñó a integrar múltiples técnicas de IA en un sistema de lenguaje de C++, aprendiendo a hacer una preparación adecuada de datos, manejo de API's externas, balance entre control y flexibilidad en los algoritmos.
+
+Implementar la API me enseñó a manejar soicitudes HTTP POST y formatos JSON, además de entender la importancia del escape de caracteres especiales para evitar errores en las respuestas. Además de crear un sistema de coincidencias valoriza los desafíos de búsqueda de palabras, como la ambiguedad del lenguaje y la necesidad de técnicas más avanzadas.
